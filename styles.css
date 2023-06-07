@@ -68,6 +68,17 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
+button {
+    color: #ffffff;
+    font-size: .75em;
+    background-color: #590242;
+    border-radius: 4px;
+    padding: 2px 10px;
+    margin: 5px;
+}
+
+
+
 button:hover {
     background-color: #020659;
 }
