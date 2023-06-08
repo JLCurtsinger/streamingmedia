@@ -305,6 +305,10 @@ audio::-webkit-media-controls-enclosure {
 }
 
 footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
     background-color: #ffffff;
 }
 
