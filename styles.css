@@ -8,6 +8,7 @@ header {
     color: #ffffff;
     padding: .1em .8em .6em 2em;
     margin-top: 4em;
+    grid-area: header;
 }
 
 body {
@@ -15,8 +16,13 @@ body {
     margin: 0 auto;
     max-width: 834px;
     background-color: #ffffff;
-    /* grid-template-columns: .75fr 1.25fr;
-    grid-template-rows: 1fr 1fr; */
+    grid-template-areas: 
+    "header header"
+    "trending trending"
+    "yourPlaylists curatedPlaylists";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 3fr;
+    grid-gap: 5px;
 }
 
 ul {
@@ -90,6 +96,10 @@ button:hover {
 
 section {
     background-color: #ffffff;
+}
+
+#nav {
+    background-color: #030A8C;
 }
 
 nav ul {
@@ -186,24 +196,9 @@ audio::-webkit-media-controls-enclosure {
     background-color: rgba(255,255,255,.5);
 }
 
-/* #TrendingSongs {
-    grid-column-start: 1;
-    grid-column-end: 2;
+#TrendingSongs {
+    grid-area: trending;
 }
-
-#YourPlaylists {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-#CuratedPlaylists {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-} */
 
 #TrendingSongs ::-webkit-scrollbar {
     width: 15px;
@@ -234,10 +229,12 @@ audio::-webkit-media-controls-enclosure {
 
 .playlists {
     color: #ffffff;
+    max-height: 50vh;
 }
 
 #YourPlaylists {
     background-color: #2699FB;
+    grid-area: yourPlaylists;
 }
 
 #YourPlaylists div {
@@ -246,6 +243,7 @@ audio::-webkit-media-controls-enclosure {
 
 #CuratedPlaylists {
     background-color: #030A8C;
+    grid-area: curatedPlaylists;
 }
 
 #CuratedPlaylists div {
