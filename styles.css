@@ -52,7 +52,6 @@ header .menu-icon {
     position: relative; 
     padding: 25px;
     float: right;
-    display: inline-block;
     cursor: pointer;
 }
 
